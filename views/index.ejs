@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Express Blog</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h2>Express Blog</h2>
+    <a href="/write">Write</a>
+    <% for(var i=0; i<posts.length; i++) {%>
+    <h3><%= posts[i].title%></h3>
+    <p><%= posts[i].content%></p>
+    <% } %>
   </body>
 </html>
