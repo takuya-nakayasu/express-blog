@@ -10,6 +10,7 @@ router.get('/', (req, res, next) => {
   db.serialize(() => {
     db.all('select * from post', (err, rows) => {
       if (!err && rows) {
+        // 改行コードを<br>に変換
         const newRows = rows.map(row => {
           if (row.content) {
             row.content = row.content.replace(/\r?\n/g, '<br>');
