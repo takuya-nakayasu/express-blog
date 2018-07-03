@@ -1,5 +1,32 @@
-<form action="/write" method="POST">
-    <input type="text" name="title" /><br />
-    <textarea name="content"></textarea><br />
-    <button type="submit">Submit</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Blog</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>新しい記事を投稿</h1>
+        <form action="/write" method="POST">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <td>
+                        <input type="text" class="title-input" name="title" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Content</th>
+                    <td>
+                        <textarea name="content"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <button type="submit">投稿</button>
+                    </td>
+                </tr>
+        </table>
+        </form>
+  </body>
+</html>

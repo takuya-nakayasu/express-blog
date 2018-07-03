@@ -6,3 +6,35 @@ body {
 a {
   color: #00B7FF;
 }
+
+input[type="text"],
+textarea {
+    padding: 0.8em;
+    outline: none;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+textarea {
+    width: 300px;
+}
+
+input[type="text"]:focus,
+texture:focus {
+    box-shadow: 0 0 7px #3498db;
+    border: 1px solid #3498db;
+}
+
+button {
+  border:solid 1px #ccc;
+  padding:15px 30px;
+  margin: 20px 0;
+  font-family:Arial, sans-serif;
+  font-size:1.2em;
+  text-transform:uppercase;
+  font-weight:bold;
+  color:#333;
+  cursor:pointer;
+}

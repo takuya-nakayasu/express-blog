@@ -9,8 +9,15 @@ var db = new sqlite3.Database('mydb.sqlite3');
 router.get('/', (req, res, next) => {
   db.serialize(() => {
     db.all('select * from post', (err, rows) => {
-      if (!err) {
-        res.render('index', { posts: rows });
+      if (!err && rows) {
+        const newRows = rows.map(row => {
+          if (row.content) {
+            row.content = row.content.replace(/\r?\n/g, '<br>');
+          }
+          return row;
+        });
+        console.log(newRows);
+        res.render('index', { posts: newRows });
       }
     });
   });
