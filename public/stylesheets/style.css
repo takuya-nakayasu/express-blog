@@ -9,6 +9,7 @@ a {
 
 input[type="text"],
 textarea {
+    width: 400px;
     padding: 0.8em;
     outline: none;
     border: 1px solid #DDD;
@@ -18,11 +19,12 @@ textarea {
     font-size: 16px;
 }
 textarea {
-    width: 300px;
+    width: 600px;
+    height: 200px;
 }
 
 input[type="text"]:focus,
-texture:focus {
+textarea:focus {
     box-shadow: 0 0 7px #3498db;
     border: 1px solid #3498db;
 }
