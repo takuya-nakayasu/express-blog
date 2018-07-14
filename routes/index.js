@@ -8,6 +8,7 @@ var db = new sqlite3.Database('mydb.sqlite3');
 /* GET home page. */
 router.get('/', (req, res, next) => {
   db.serialize(() => {
+    // DBから投稿されたブログをすべて取得
     db.all('select * from post', (err, rows) => {
       if (!err && rows) {
         // 改行コードを<br>に変換
@@ -18,6 +19,7 @@ router.get('/', (req, res, next) => {
           return row;
         });
         console.log(newRows);
+        // postsパラメータを渡した状態で、index.ejsをレンダリング
         res.render('index', { posts: newRows });
       }
     });
