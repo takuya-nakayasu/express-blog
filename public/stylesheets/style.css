@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
 a {
@@ -39,4 +40,27 @@ button {
   font-weight:bold;
   color:#333;
   cursor:pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.article {
+  background-color: white;
+  margin: 0 25% 30px 25%;
+  width: 50%;
+}
+
+.write {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.title {
+  margin: 0 0 100px 0;
 }
