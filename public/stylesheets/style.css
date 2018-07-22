@@ -53,6 +53,7 @@ button {
   background-color: white;
   margin: 0 25% 30px 25%;
   width: 50%;
+  box-shadow: 0 0 1px #d9d9d9;
 }
 
 .write {
